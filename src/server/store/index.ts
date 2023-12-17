@@ -1,7 +1,7 @@
 import { InferState, combineProducers } from "@rbxts/reflex";
-import { client_slice } from "./client_slice";
+import { server_slice } from "./server_slice";
 import { shared_slices } from "shared/store";
-import { receiver_middleware } from "./middleware/receiver";
+import { broadcaster_middleware } from "./middleware/broadcaster";
 
 export type RootStore = typeof store;
 export type RootState = InferState<RootStore>;
@@ -9,10 +9,10 @@ export type RootState = InferState<RootStore>;
 function create_store() {
     const store = combineProducers({
         ...shared_slices,
-        client: client_slice
+        server: server_slice
     });
 
-    store.applyMiddleware(receiver_middleware());
+    store.applyMiddleware(broadcaster_middleware());
 
     return store;
 }
