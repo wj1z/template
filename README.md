@@ -1,7 +1,7 @@
 # template-ts
 
-## A general-purpose template for my **roblox-ts** projects.
-### Made by @wj1z.
+### A general-purpose template for my **roblox-ts** projects.
+Made by [@wj1z](https://www.roblox.com/users/1204614554/profile "@wj1z Profile").
 
 > [!NOTE]
 > This template consists of **Flamework**, **React**, **Reflex**, **React-Reflex** and other general packages.
