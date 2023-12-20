@@ -3,6 +3,8 @@ import { Layer } from "client/components/ui/layer";
 
 export default function App() {
     return (
-        <Layer key={"hud"} display_order={1} />
+        <Layer key={"hud"} display_order={1}>
+            
+        </Layer>
     );
 }

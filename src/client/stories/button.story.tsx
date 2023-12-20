@@ -1,29 +1,27 @@
+import Roact, { createRef } from "@rbxts/roact";
 import { hoarcekat } from "@rbxts/pretty-react-hooks";
-import Roact from "@rbxts/roact";
+import { palette } from "client/constants/palette";
+import { Button } from "client/components/ui/button";
+import { Text } from "client/components/ui/text";
 
 export = hoarcekat(() => {
     return (
-        <textbutton key={"Button"}
-            AnchorPoint={new Vector2(0.5, 0.5)}
-            Size={UDim2.fromOffset(200, 50)}
-            Position={UDim2.fromScale(0.5, 0.5)}
-            BackgroundColor3={Color3.fromHex("#303446")}
-            TextColor3={Color3.fromHex("#C6D0F5")}
-            Text={"template-ts"}
-            TextSize={16}
-            Font={Enum.Font.SourceSansBold}
-            Event={{
-                MouseButton1Click: () => print("Clicked!")
-            }}
+        <Button
+            anchor_point={new Vector2(0.5, 0.5)}
+            position={UDim2.fromScale(0.5, 0.5)}
+            size={UDim2.fromScale(0.2, 0.2)}
+            background_color={palette.base}
+            corner_radius={new UDim(0.1, 0)}
+            on_click={() => print("Clicked!")}
         >
-            <uicorner
-                CornerRadius={new UDim(0.075, 0)}
+            <Text
+                anchor_point={new Vector2(0.5, 0.5)}
+                position={UDim2.fromScale(0.5, 0.5)}
+                size={UDim2.fromScale(1, 1)}
+                text={"Template Button"}
+                text_color={palette.text}
             />
-            <uistroke
-                ApplyStrokeMode={Enum.ApplyStrokeMode.Border}
-                Color={Color3.fromHex("#232634")}
-                Thickness={2}
-            />
-        </textbutton>
+            <uistroke Color={palette.crust} ApplyStrokeMode={Enum.ApplyStrokeMode.Border} />
+        </Button>
     )
 });

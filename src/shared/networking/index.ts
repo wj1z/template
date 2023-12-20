@@ -1,15 +1,15 @@
 import { Networking } from "@flamework/networking";
 import { BroadcastAction } from "@rbxts/reflex";
 
-interface ServerEvents {
+interface ClientToServerEvents {
     start(): void
 }
-interface ServerFunctions {}
+interface ClientToServerFunctions {}
 
-interface ClientEvents {
+interface ServerToClientEvents {
     dispatch(actions: BroadcastAction[]): void
 }
-interface ClientFunctions {}
+interface ServerToClientFunctions {}
 
-export const GlobalEvents = Networking.createEvent<ServerEvents, ClientEvents>();
-export const GlobalFunctions = Networking.createFunction<ServerFunctions, ClientFunctions>();
+export const GlobalEvents = Networking.createEvent<ClientToServerEvents, ServerToClientEvents>();
+export const GlobalFunctions = Networking.createFunction<ClientToServerFunctions, ServerToClientFunctions>();

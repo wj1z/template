@@ -18,9 +18,9 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@flamework/components": "^1.0.0-beta.24",
+    "@flamework/components": "^1.0.1",
     "@flamework/core": "^1.0.1",
-    "@flamework/networking": "^1.0.0-beta.24",
+    "@flamework/networking": "^1.0.1",
     "@rbxts/flipper": "^2.0.1",
     "@rbxts/pretty-react-hooks": "^0.3.3",
     "@rbxts/react-reflex": "^0.2.0",
