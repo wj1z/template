@@ -10,7 +10,7 @@ export interface ButtonProps extends FrameProps<TextButton> {
 	on_mouse_leave?: () => void
 }
 
-export function Button(props: ButtonProps) {
+const Button = (props: ButtonProps) => {
     const { on_click, on_mouse_down, on_mouse_enter, on_mouse_leave, on_mouse_up } = props;
 
     const event: Roact.JsxInstanceEvents<TextButton> = {
@@ -44,3 +44,5 @@ export function Button(props: ButtonProps) {
         </textbutton>
     );
 }
+
+export default Button;

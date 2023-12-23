@@ -21,7 +21,7 @@ export interface TextProps<T extends Instance = TextLabel> extends FrameProps<T>
 	max_visible_graphemes?: number | Roact.Binding<number>
 }
 
-export function Text(props: TextProps) {
+const Text = (props: TextProps) => {
     return (
         <textlabel
             Font={Enum.Font.Unknown}
@@ -56,3 +56,5 @@ export function Text(props: TextProps) {
         </textlabel>
     );
 }
+
+export default Text;

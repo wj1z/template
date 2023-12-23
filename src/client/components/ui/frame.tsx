@@ -17,7 +17,7 @@ export interface FrameProps<T extends Instance = Frame> extends Roact.PropsWithC
 	corner_radius?: UDim | Roact.Binding<UDim>
 }
 
-export const Frame = forwardRef((props: FrameProps, ref: Roact.Ref<Frame>) => {
+const Frame = forwardRef((props: FrameProps, ref: Roact.Ref<Frame>) => {
     return (
         <frame
             ref={ref}
@@ -40,3 +40,5 @@ export const Frame = forwardRef((props: FrameProps, ref: Roact.Ref<Frame>) => {
         </frame>
     );
 });
+
+export default Frame;

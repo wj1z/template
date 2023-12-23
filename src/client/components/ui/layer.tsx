@@ -4,7 +4,7 @@ interface LayerProps extends Roact.PropsWithChildren {
     display_order: number
 };
 
-export function Layer({display_order, children}: LayerProps) {
+const Layer = ({display_order, children}: LayerProps) => {
     return (
         <screengui
             ResetOnSpawn={false}
@@ -16,3 +16,5 @@ export function Layer({display_order, children}: LayerProps) {
         </screengui>
     );
 }
+
+export default Layer;
